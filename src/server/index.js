@@ -14,7 +14,8 @@ app.use(cors());
 // DB connection
 var MONGODB_URL = process.env.MONGODB_URL;
 var mongoose = require("mongoose");
-mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+mongoose.connect(' mongodb+srv://mayurnarare:Mayur9921@cluster0.8xpsv.gcp.mongodb.net/todo?retryWrites=true&w=majority',
+ { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
   console.log("Connected to %s", MONGODB_URL);
   console.log("App is running ... \n");
 })
