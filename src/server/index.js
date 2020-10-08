@@ -1,7 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require("dotenv").config();
-const cors = require('cors')
+const cors = require('cors');
+var os = require("os");
+var hostname = os.hostname();
 
 const apirouter = require('./router');
 const port = process.env.PORT || 8080;
@@ -26,6 +28,7 @@ var db = mongoose.connection;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+
 app.get('/test', (req, res) => {
   console.log('yuppp');
   res.send(JSON.stringify({ greeting: `Hello!` }));
@@ -39,5 +42,5 @@ app.all("*", function (req, res) {
 });
 
 app.listen(port, () =>
-  console.log('Express server is running on localhost:', port)
+  console.log(`Express server is running on ${hostname}:`, port)
 );
