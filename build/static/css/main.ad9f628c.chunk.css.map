@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,cACE,UACF,CAEA,cACE,cACF","file":"main.ad9f628c.chunk.css","sourcesContent":[".search-input {\n  width: 100%;\n}\n\n.custome-cell {\n  cursor: pointer;\n}"]}

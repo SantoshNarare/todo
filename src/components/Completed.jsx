@@ -10,7 +10,7 @@ const Completed = () => {
 
   useEffect(() => {
     updateState('done');
-    updateTask({ url: groupBy ? `http://localhost:8080/api/todo?status=done&&groupBy=${groupBy}` : "http://localhost:8080/api/todo?status=done" });
+    updateTask({ url: groupBy ? `http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo?status=done&&groupBy=${groupBy}` : "http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo?status=done" });
   }, [groupBy]);
 
   return (

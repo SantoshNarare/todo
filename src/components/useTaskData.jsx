@@ -84,8 +84,8 @@ const TaskDataProvider = ({ children }) => {
               <UpdateGroupBYContext.Provider value={updateGroupBy}>
                 <SearchContext.Provider value={search}>
                   <UpdateSearchContext.Provider value={updateSearch}>
-                    <Dimmer active={false}>
-                      <Loader size='large' color="blue" active={false}>Loading</Loader>
+                    <Dimmer active={loading}>
+                      <Loader size='large' color="blue" active={loading}>Loading</Loader>
                     </Dimmer>
                     {children}
                   </UpdateSearchContext.Provider>

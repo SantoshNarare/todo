@@ -88,7 +88,7 @@ const HeaderComponent = () => {
     if (summary && description && dueDate && priority) {
       const postDat = await axios({
         method: 'post',
-        url: 'http://localhost:8080/api/create',
+        url: 'http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/create',
         headers: {
           "Content-Type": "application/json"
         },
@@ -101,7 +101,7 @@ const HeaderComponent = () => {
         },
       });
       setModelOpen(false);
-      const url = status ? `http://localhost:8080/api/todo?status=${status}` : 'http://localhost:8080/api/todo';
+      const url = status ? `http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo?status=${status}` : 'http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo';
       updateTask({ url });
       setPriority('');
       setSummary('');
