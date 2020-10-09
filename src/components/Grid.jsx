@@ -61,7 +61,7 @@ const Status = (props) => {
     setDone(!isDone);
     const postDat = await axios({
       method: 'post',
-      url: `http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo/${props.data._id}`,
+      url: `http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo/${props.data._id}`,
       headers: {
         "Content-Type": "application/json"
       },
@@ -71,7 +71,7 @@ const Status = (props) => {
         currentState: props.data.currentState === 'open' ? 'done' : 'open',
       },
     });
-    const url = status ? `http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo?status=${status}` : 'http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo';
+    const url = status ? `http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo?status=${status}` : 'http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo';
     updateTask({ url });
   }
 
@@ -172,7 +172,7 @@ const EditPopUpModel = ({ item, isShowModel = false, onClose }) => {
     if (summary && description && dueDate && priority) {
       const postDat = await axios({
         method: 'post',
-        url: `http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo/${item._id}`,
+        url: `http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo/${item._id}`,
         headers: {
           "Content-Type": "application/json"
         },
@@ -184,7 +184,7 @@ const EditPopUpModel = ({ item, isShowModel = false, onClose }) => {
           priority: priority,
         },
       });
-      const url = status ? `http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo?status=${status}` : 'http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo';
+      const url = status ? `http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo?status=${status}` : 'http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo';
       updateTask({ url });
       onClose(false);
     }
@@ -258,8 +258,8 @@ const DeletePopUpModel = ({ item, isShowModel = false, onClose }) => {
 
   const handleFormSubmit = async () => {
     console.log('deleteRead', item);
-    await axios.delete(`http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo/${item._id}`);
-    const url = status ? `http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo?status=${status}` : 'http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo';
+    await axios.delete(`http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo/${item._id}`);
+    const url = status ? `http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo?status=${status}` : 'http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo';
     await updateTask({ url });
     onClose(false);
   };

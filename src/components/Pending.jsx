@@ -9,7 +9,7 @@ const Pending = () => {
 
   useEffect(() => {
     updateState('open');
-    updateTask({ url: groupBy ? `http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo?status=open&&groupBy=${groupBy}` : "http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo?status=open" });
+    updateTask({ url: groupBy ? `http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo?status=open&&groupBy=${groupBy}` : "http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo?status=open" });
   }, [groupBy]);
 
   return (

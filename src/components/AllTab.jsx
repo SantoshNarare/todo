@@ -9,7 +9,7 @@ const AllTab = () => {
 
   useEffect(() => {
     updateState('');
-    updateTask({ url: groupBy ? `http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo?groupBy=${groupBy}` : "http://ec2-3-19-68-175.us-east-2.compute.amazonaws.com/api/api/todo" });
+    updateTask({ url: groupBy ? `http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo?groupBy=${groupBy}` : "http://ec2-3-16-187-172.us-east-2.compute.amazonaws.com/api/api/todo" });
   }, [groupBy]);
 
   return (
